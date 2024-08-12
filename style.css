@@ -1,0 +1,747 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ :root {
+    /* Font Families */
+    --poppins-font: "Poppins", sans-serif;
+    /* Colors */
+    --body-color: #171b44;
+    --body-alter-color: #4454ff;
+    --main-color: #ff4d55;
+    --hover-color: #f8646c;
+    --container-color: #1d2352;
+    --text-alter-color: #08d2d4;
+}
+
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+html {
+    font-family: var(--poppins-font);
+}
+
+.container {
+    max-width: 1060px;
+    margin: auto;
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--main-color);
+    color: white;
+    font-weight: 550;
+}
+
+header {
+    background-color: var(--body-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 350px;
+    width: 100%;
+    height: 87px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.logo span {
+    color: var(--main-color);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.login-btn {
+    width: 90px;
+    height: 40px;
+    border: none;
+    font-size: 15px;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: var(--main-color);
+    text-decoration: underline;
+    bottom: -4px;
+    left: 0;
+    transition: all 0.4s linear;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ----home start-----*/
+
+section {
+    position: relative;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.home img {
+    width: 100%;
+    height: 810px;
+}
+
+.home-overlay {
+    position: absolute;
+    background: linear-gradient( 74deg, rgb(23, 27, 68, 80%) 50%, rgb(23, 27, 68, 14%));
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.home-content {
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    left: 0px;
+    max-width: 500px;
+    margin-left: 400px;
+    z-index: 200;
+}
+
+.home-title {
+    font-size: 35px;
+    color: white;
+}
+
+.home-title span {
+    color: var(--main-color);
+}
+
+.home-title::after {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 3px;
+    background: var(--main-color);
+    left: 0;
+    top: -10px;
+}
+
+.description {
+    max-width: 450px;
+    font-size: 14px;
+    margin: 0.2rem 0 1rem;
+    color: white;
+}
+
+.view-btn {
+    background: var(--main-color);
+    padding: 10px 16px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+}
+
+.btn:hover {
+    background: var(--hover-color);
+}
+
+
+/* ----home end-----*/
+
+
+/*--- Services start---- */
+
+.heading {
+    position: relative;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+    color: white;
+    margin-top: 80px;
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    background: var(--main-color);
+    width: 44px;
+    height: 3px;
+    display: flex;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 1.5rem;
+}
+
+.ser-box {
+    background: var(--container-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.3rem;
+    padding: 20px;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.ser-box:hover {
+    transform: scale(1.05);
+}
+
+.ser-box .bi {
+    font-size: 1.7rem;
+    background: var(--main-color);
+    padding: 10px;
+    border-radius: 0.3rem;
+}
+
+.ser-box-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 1.3rem 0 0.5rem;
+    color: white;
+}
+
+.ser-box p {
+    font-size: 14.5px;
+    color: white;
+}
+
+
+/*--- Services end---- */
+
+
+/*--- game start---- */
+
+.game-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    gap: 2rem;
+}
+
+.game-img {
+    width: 100%;
+    height: 220px;
+}
+
+.game-text {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.game-title {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+.game-price {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.game-price span {
+    color: var(--text-alter-color);
+}
+
+.game-box {
+    background-color: var(--container-color);
+}
+
+.game-box p {
+    font-size: 14px;
+    color: white;
+}
+
+.game-btn {
+    color: var(--main-color);
+    margin-top: 0.5rem;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+/*--- game end---- */
+
+
+/*--- faq start---- */
+
+.faq {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.faq-text {
+    max-width: 50%;
+}
+
+.faq-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.faq-text p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.faq-btn {
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+}
+
+.faq-btn a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+}
+
+.faq-img img {
+    width: 100%;
+    height: 400px;
+}
+
+
+/*--- faq end---- */
+
+
+/*---question start----*/
+
+.question {
+    display: flex;
+}
+
+.qestion-cart {
+    display: block;
+    width: 80%;
+}
+
+.question-text {
+    display: flex;
+    font-size: 10px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--container-color);
+    margin-bottom: 10px;
+    border-radius: 3px;
+    padding: 0 7px;
+    height: 70px;
+    margin-right: 70px;
+    font-family: var(--poppins-font);
+}
+
+.question .bi {
+    font-size: 22px;
+}
+
+.question-info {
+    position: relative;
+    font-size: 19px;
+    color: white;
+}
+
+.question-info p {
+    margin: 0.5rem 0 1.5rem;
+    color: white;
+    font-size: 15px;
+}
+
+.ask {
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    background-color: var(--main-color);
+    color: white;
+}
+
+
+/*--- question end----*/
+
+
+/*--- control panel start----*/
+
+.control {
+    background: var(--container-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.control-content {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-text {
+    color: white;
+    width: 100%;
+}
+
+.control-image {
+    display: block;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 17rem;
+}
+
+.control-image img {
+    width: 450px;
+    height: 250px;
+}
+
+.list .bi {
+    color: rgb(219, 61, 61);
+}
+
+
+/*--- control panel end----*/
+
+
+/*--- footer start----*/
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-top: 4rem !important;
+    padding-bottom: 20px;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: white;
+}
+
+.footer-box .footer-logo {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.footer-box h2 {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.footer-box a {
+    color: #d4d4d4;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: all 0.3s linear;
+}
+
+.footer-box a:hover {
+    color: var(--hover-color);
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 7px;
+}
+
+.social .bi {
+    font-size: 16px;
+    font-size: 16px;
+    transition: all 0.4s;
+    color: white;
+}
+
+.social .bi:hover {
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+
+/*--- footer end----*/
+
+
+/*---  copyright start----*/
+
+.copyright {
+    border-top: 1px solid var(--text-color);
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.short-hr {
+    width: 57%;
+    margin: 0 auto;
+}
+
+.copyright p {
+    font-size: 0.8rem;
+    color: white;
+}
+
+.payments .bx {
+    font-size: 25px;
+    color: white;
+}
+
+
+/*---  copyright end----*/
+
+
+/* ----- Prices start-----*/
+
+.prices {
+    background-image: linear-gradient( rgb(23, 27, 68, 87%) 100%, rgb(23, 27, 68, 87%) 100%), url(./image/prices-home.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.prices-text {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.prices-subtitle {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+}
+
+.prices-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.prices-description {
+    font-size: 1rem;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.prices-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    margin-top: 8rem !important;
+}
+
+.price-item {
+    background: var(--container-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.4rem;
+    margin-bottom: 5rem;
+    transition: 0.4s;
+    cursor: pointer;
+    color: white;
+}
+
+.price-item:hover {
+    transform: translateY(-10px);
+}
+
+.price-box-img {
+    width: 100px;
+    display: block;
+    position: relative;
+    margin-top: -64px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card-top {
+    margin: 1rem;
+}
+
+.price-item-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.card-top p {
+    font-size: 0.95rem;
+    color: #d4d4d4;
+}
+
+.price-heading {
+    width: 100%;
+    background: var(--main-color);
+    padding: 8px 0;
+}
+
+.price-heading h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.price-heading span {
+    font-size: 1rem;
+}
+
+.ram-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0.8rem 0 1rem;
+}
+
+.ram-title span {
+    font-size: 1rem;
+    color: #d4d4d4;
+    font-weight: 500;
+}
+
+.plan-btn {
+    background: var(--main-color);
+    padding: 8px 24px;
+    color: var(--text-color);
+    white-space: nowrap;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+.plan-btn:hover {
+    background: var(--hover-color);
+}
+
+.control {
+    margin-top: 6rem;
+}
+
+
+/* ----- Prices end-----*/
+
+
+/* ! Responsive */
+
+@media (max-width: 1050px) {
+    .container {
+        margin: 0 auto;
+        width: 92%;
+    }
+}
+
+@media (max-width: 952px) {
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .prices-text {
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+    .prices-title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    .prices-description {
+        font-size: 0.8rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 850px) {
+    .prices-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 780px) {}
+
+@media (max-width: 750px) {
+    footer {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .logo {
+        position: absolute;
+        left: 0;
+    }
+    .nav {
+        display: none;
+    }
+    .home-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .home-title {
+        position: absolute;
+        right: 200px;
+    }
+}
+
+@media (max-width: 540px) {
+    .prices-container {
+        grid-template-columns: 1fr;
+    }
+}

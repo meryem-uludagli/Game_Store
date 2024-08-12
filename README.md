@@ -19,4 +19,4 @@ This project is aimed at developing a modern **Game Store** web page using HTML 
 - **Google Fonts**: Custom fonts for the web page.
 
 # 👾 Preview:
-![](./Game_Store.gif)# Game_Store
+![](./Game_Store.gif)
